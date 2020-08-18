@@ -49,3 +49,19 @@ export function signup(signupRequest) {
         body: JSON.stringify(signupRequest)
     });
 }
+
+export function resetPassword(resetPasswordRequest) {
+    return request({
+        url: API_BASE_URL + "/secret/reset",
+        method: 'PUT',
+        body: JSON.stringify(resetPasswordRequest)
+    });
+}
+
+export function changePassword(changePasswordRequest) {
+    return request({
+        url: API_BASE_URL + "/secret/change",
+        method: 'PUT',
+        body: JSON.stringify(changePasswordRequest)
+    });
+}

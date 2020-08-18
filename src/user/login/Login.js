@@ -44,6 +44,7 @@ class Login extends Component {
                     </div>
                     <LoginForm {...this.props} />
                     <span className="signup-link">New user? <Link to="/signup">Sign up!</Link></span>
+                    <div><Link to="/forgotpassword">Forgot Password</Link></div>
                 </div>
             </div>
         );

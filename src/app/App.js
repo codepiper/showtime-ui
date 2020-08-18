@@ -6,6 +6,8 @@ import {
 import AppHeader from '../common/AppHeader';
 import Home from '../home/Home';
 import Login from '../user/login/Login';
+import Forgotpassword from '../user/forgotpassword/Forgotpassword';
+import Changepassword from '../user/changepassword/Changepassword';
 import Signup from '../user/signup/Signup';
 import Profile from '../user/profile/Profile';
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
@@ -31,6 +33,8 @@ class App extends Component {
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
+
+
 
   loadCurrentlyLoggedInUser() {
     this.setState({
@@ -84,6 +88,8 @@ class App extends Component {
             <Route path="/signup"
               render={(props) => <Signup authenticated={this.state.authenticated} {...props} />}></Route>
             <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>  
+            <Route path="/forgotpassword" component={Forgotpassword}></Route>
+            <Route path="/changepassword" component={Changepassword}></Route>
             <Route component={NotFound}></Route>
           </Switch>
         </div>
