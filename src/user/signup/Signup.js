@@ -27,7 +27,7 @@ class Signup extends Component {
                         <span className="or-text">OR</span>
                     </div>
                     <SignupForm {...this.props} />
-                    <span className="login-link">Already have an account? <Link to="/login">Login!</Link></span>
+                    <span className="login-link">Already have an account? [<Link to="/login">Login</Link>] [<Link to="/forgotpassword">Forgot Password</Link>]</span>
                 </div>
             </div>
         );
@@ -43,8 +43,8 @@ class SocialSignup extends Component {
                     <img src={googleLogo} alt="Google" /> Sign up with Google</a>
                 <a className="btn btn-block social-btn facebook" href={FACEBOOK_AUTH_URL}>
                     <img src={fbLogo} alt="Facebook" /> Sign up with Facebook</a>
-                <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL}>
-                    <img src={githubLogo} alt="Github" /> Sign up with Github</a>
+                 {/* <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL}>
+                    <img src={githubLogo} alt="Github" /> Sign up with Github</a> */}
             </div>
         );
     }
